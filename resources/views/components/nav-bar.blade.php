@@ -1,7 +1,7 @@
 <nav class="bg-transparent border-gray-200 absolute top-0 left-0 w-full z-50">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="{{ asset('images/alanxcode.png') }}" class="h-10 rounded-full" alt="ALANxCODE Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-slate-100">Xoni Agency</span>
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
@@ -24,19 +24,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/"
+                    <a href="/tentang"
+                        class="block py-2 px-3 md:p-2 rounded {{ $activePage === 'tentang' ? 'bg-sky-800 text-slate-100' : 'hover:text-slate-100 hover:bg-sky-800' }} md:hover:bg-transparent md:hover:text-sky-800 md:transition-colors md:duration-500 md:ease-in-out md:text-lg md:bg-transparent {{ $activePage === 'tentang' ? 'md:text-sky-800' : 'md:text-slate-100' }}">
+                        Tentang
+                    </a>
+                </li>
+                <li>
+                    <a href="/layanan"
                         class="block py-2 px-3 md:p-2 rounded {{ $activePage === 'layanan' ? 'bg-sky-800 text-slate-100' : 'hover:text-slate-100 hover:bg-sky-800' }} md:hover:bg-transparent md:hover:text-sky-800 md:transition-colors md:duration-500 md:ease-in-out md:text-lg md:bg-transparent {{ $activePage === 'layanan' ? 'md:text-sky-800' : 'md:text-slate-100' }}">
                         Layanan
                     </a>
                 </li>
                 <li>
-                    <a href="/"
-                        class="block py-2 px-3 md:p-2 rounded {{ $activePage === 'pemesanan' ? 'bg-sky-800 text-slate-100' : 'hover:text-slate-100 hover:bg-sky-800' }} md:hover:bg-transparent md:hover:text-sky-800 md:transition-colors md:duration-500 md:ease-in-out md:text-lg md:bg-transparent {{ $activePage === 'pemesanan' ? 'md:text-sky-800' : 'md:text-slate-100' }}">
-                        Pemesanan
-                    </a>
-                </li>
-                <li>
-                    <a href="/"
+                    <a href="/kontak"
                         class="block py-2 px-3 md:p-2 rounded {{ $activePage === 'kontak' ? 'bg-sky-800 text-slate-100' : 'hover:text-slate-100 hover:bg-sky-800' }} md:hover:bg-transparent md:hover:text-sky-800 md:transition-colors md:duration-500 md:ease-in-out md:text-lg md:bg-transparent {{ $activePage === 'kontak' ? 'md:text-sky-800' : 'md:text-slate-100' }}">
                         Kontak
                     </a>

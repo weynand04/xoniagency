@@ -9,6 +9,8 @@
     @yield('page')
 
     <x-end-body></x-end-body>
+
+    <x-footer :activePage="$activePage"></x-footer>
 </body>
 
 </html>
