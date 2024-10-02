@@ -29,7 +29,7 @@
 
                 <div class="flex justify-center">
                     <div class="bg-white rounded-lg text-center grid grid-cols-1 gap-y-10 md:grid-cols-3 md:gap-x-6 ">
-                        <div class="space-y-4 border border-gray-900 p-6">
+                        <div class="space-y-4 border border-gray-900/50 p-6">
                             <div class="flex justify-center">
                                 <svg class="w-10 h-10 text-gray-900 mb-3" xmlns="http://www.w3.org/2000/svg" height="24px"
                                     viewBox="0 -960 960 960" width="24px" fill="#075985">
@@ -45,7 +45,7 @@
                                 rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
                         </div>
 
-                        <div class="space-y-4 border border-gray-900 p-6">
+                        <div class="space-y-4 border border-gray-900/50 p-6">
                             <div class="flex justify-center">
                                 <svg class="w-10 h-10 text-gray-900 mb-3" xmlns="http://www.w3.org/2000/svg" height="24px"
                                     viewBox="0 -960 960 960" width="24px" fill="#075985">
@@ -61,7 +61,7 @@
                                 rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero</p>
                         </div>
 
-                        <div class="space-y-4 border border-gray-900 p-6">
+                        <div class="space-y-4 border border-gray-900/50 p-6">
                             <div class="flex justify-center">
                                 <svg class="w-10 h-10 text-gray-900 mb-3" xmlns="http://www.w3.org/2000/svg" height="24px"
                                     viewBox="0 -960 960 960" width="24px" fill="#075985">
@@ -82,7 +82,7 @@
             </div>
         </section>
 
-        <section class="bg-slate-100 font-ubuntu">
+        <section class="bg-slate-200 font-ubuntu">
             <div class="py-20 px-4 grid grid-cols-1 gap-y-8 md:grid-cols-2 md:space-x-4 lg:px-20">
                 <div class="relative overflow-hidden" style="padding-top: 56.25%;">
                     <iframe class="absolute top-0 left-0 w-full h-full"
@@ -92,7 +92,7 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
 
-                <div class="space-y-6">
+                <div class="space-y-6 text-gray-900">
                     <h1 class="text-5xl font-medium">WE HELP BRANDS TO CONNECT AND GROW ON LARGE</h1>
                     <p class="text-sm opacity-60">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
                         Phasellus viverra
@@ -104,6 +104,117 @@
                     <button
                         class="transition duration-300 bg-white text-sky-800 py-2 px-4 rounded-xl font-bold text-md uppercase hover:bg-sky-800 hover:text-white">Start
                         Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white font-ubuntu">
+            <div class="py-20 px-6 grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-4 lg:px-20">
+                <div class="space-y-6">
+                    <h1 class="text-4xl font-semibold uppercase">What We Offer</h1>
+                    <p class="text-sm opacity-80">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
+                        viverra
+                        nulla metus varius
+                        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                        ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem
+                        quam semper libero, sit adipiscing sem neque ipsum.
+
+                        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+                        condimentum rhoncus, sem quam semper libero.
+
+                        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla metus
+                        varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+                        ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
+                        rhoncus, sem quam semper libero, sit adipiscing sem neque ipsum.</p>
+                    <button
+                        class="transition duration-300 bg-sky-800 text-white py-2 px-4 font-bold text-md uppercase hover:bg-white hover:text-sky-800 hover:ring hover:ring-sky-800">Explore
+                        Now</button>
+                </div>
+
+                <div class="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-x-6">
+                    <div class="space-y-4 border border-gray-900/50 p-6 text-center">
+                        <div class="flex justify-center">
+                            <svg class="w-10 h-10 text-gray-900 mb-3" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#075985">
+                                <path
+                                    d="M480-80q-26 0-47-12.5T400-126q-33 0-56.5-23.5T320-206v-142q-59-39-94.5-103T190-590q0-121 84.5-205.5T480-880q121 0 205.5 84.5T770-590q0 77-35.5 140T640-348v142q0 33-23.5 56.5T560-126q-12 21-33 33.5T480-80Zm-80-126h160v-36H400v36Zm0-76h160v-38H400v38Zm-8-118h58v-108l-88-88 42-42 76 76 76-76 42 42-88 88v108h58q54-26 88-76.5T690-590q0-88-61-149t-149-61q-88 0-149 61t-61 149q0 63 34 113.5t88 76.5Zm88-162Zm0-38Z" />
+                            </svg>
+                        </div>
+                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">CREATIVE DESIGN
+
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-900 opacity-60">curabitur ullamcorper ultricies nisi. Nam eget
+                            dui. Etiam rhoncus.</p>
+                    </div>
+
+                    <div class="space-y-4 border border-gray-900/50 p-6 text-center">
+                        <div class="flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="075985">
+                                <path
+                                    d="M120-120v-200h160l160-160v-128q-36-13-58-43.5T360-720q0-50 35-85t85-35q50 0 85 35t35 85q0 38-22 68.5T520-608v128l160 160h160v200H640v-122L480-402 320-242v122H120Z" />
+                            </svg>
+                        </div>
+                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">MARKETING</h5>
+                        <p class="mb-3 font-normal text-gray-900 opacity-60">curabitur ullamcorper ultricies nisi. Nam eget
+                            dui. Etiam rhoncus.</p>
+                    </div>
+
+                    <div class="space-y-4 border border-gray-900/50 p-6 text-center">
+                        <div class="flex justify-center">
+                            <svg class="w-10 h-10 text-gray-900 mb-3" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#075985">
+                                <path
+                                    d="M40-120v-80h880v80H40Zm120-120q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v440q0 33-23.5 56.5T800-240H160Zm0-80h640v-440H160v440Zm0 0v-440 440Z" />
+                            </svg>
+                        </div>
+                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">PROGRAMMING
+
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-900 opacity-60">curabitur ullamcorper ultricies nisi. Nam eget
+                            dui. Etiam rhoncus.</p>
+                    </div>
+
+                    <div class="space-y-4 border border-gray-900/50 p-6 text-center">
+                        <div class="flex justify-center">
+                            <svg class="w-10 h-10 text-gray-900 mb-3" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#075985">
+                                <path
+                                    d="M120-120v-200h160l160-160v-128q-36-13-58-43.5T360-720q0-50 35-85t85-35q50 0 85 35t35 85q0 38-22 68.5T520-608v128l160 160h160v200H640v-122L480-402 320-242v122H120Z" />
+                            </svg>
+                        </div>
+                        <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">CREATIVE DESIGN
+
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-900 opacity-60">curabitur ullamcorper ultricies nisi. Nam eget
+                            dui. Etiam rhoncus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative bg-main bg-cover bg-center bg-fixed lg:h-auto font-ubuntu">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative z-10 flex items-center justify-center h-full lg:h-auto">
+                <div class="text-center max-w-7xl px-4 lg:px-8 lg:py-16">
+                    <div class="mt-8 mb-8 grid grid-cols-1 gap-14 lg:grid-cols-4 lg:grid-rows-1 lg:gap-20">
+                        <div class="space-y-2">
+                            <h1 class="text-6xl text-slate-100 font-semibold counter" data-target="13"></h1>
+                            <p class="text-slate-100 uppercase font-semibold whitespace-nowrap">Business Years</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h1 class="text-6xl text-slate-100 font-semibold counter" data-target="6213">0</h1>
+                            <p class="text-slate-100 uppercase font-semibold whitespace-nowrap">Worldwide Clients</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h1 class="text-6xl text-slate-100 font-semibold counter" data-target="55">0</h1>
+                            <p class="text-slate-100 uppercase font-semibold whitespace-nowrap">Our Team</p>
+                        </div>
+                        <div class="space-y-2">
+                            <h1 class="text-6xl text-slate-100 font-semibold counter" data-target="344">0</h1>
+                            <p class="text-slate-100 uppercase font-semibold whitespace-nowrap">Items Portfolio </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
