@@ -1,4 +1,4 @@
-<footer class="bg-zinc-900">
+<footer class="bg-zinc-900 font-ubuntu">
     <div class="mx-auto max-w-screen-xl space-y-8 px-4 pt-16 pb-7 sm:px-6 lg:space-y-16 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
             <div>

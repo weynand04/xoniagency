@@ -1,4 +1,4 @@
-<nav class="bg-transparent border-gray-200 absolute top-0 left-0 w-full z-50">
+<nav class="bg-transparent border-gray-200 absolute top-0 left-0 w-full z-50 font-ubuntu">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ asset('images/alanxcode.png') }}" class="h-10 rounded-full" alt="ALANxCODE Logo" />

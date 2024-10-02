@@ -8,3 +8,10 @@ Route::get('/', function () {
         'activePage' => 'index'
     ]);
 });
+
+Route::get('/tentang', function () {
+    return view('tentang', [
+        'title' => 'Xoni Agency - Tentang',
+        'activePage' => 'tentang'
+    ]);
+});
