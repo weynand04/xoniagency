@@ -111,7 +111,7 @@
         <section class="bg-white font-ubuntu">
             <div class="py-20 px-6 grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-4 lg:px-20">
                 <div class="space-y-6">
-                    <h1 class="text-4xl font-semibold uppercase">What We Offer</h1>
+                    <h1 class="text-4xl font-semibold uppercase md:text-5xl">What We Offer</h1>
                     <p class="text-sm opacity-80">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
                         viverra
                         nulla metus varius
@@ -213,6 +213,61 @@
                         <div class="space-y-2">
                             <h1 class="text-6xl text-slate-100 font-semibold counter" data-target="344">0</h1>
                             <p class="text-slate-100 uppercase font-semibold whitespace-nowrap">Items Portfolio </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white font-ubuntu">
+            <div class="py-20 px-6 space-y-6 lg:px-20">
+                <div class="text-center space-y-6">
+                    <h1 class="text-4xl font-bold md:text-5xl">MEET OUR TEAM</h1>
+                    <p class="text-sm text-gray-900 opacity-80"> Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                        tellus. Phasellus viverra nulla metus
+                        varius
+                        laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                        ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus</p>
+                </div>
+
+                <div class="grid grid-cols-1 text-center gap-y-6 lg:grid-cols-4 lg:gap-x-4">
+                    <div class="bg-white border border-gray-900/50 rounded-lg shadow">
+                        <img class="rounded-t-lg" src="{{ asset('images/team1.jpg') }}" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">CRISTINA RENALDO
+                            </h5>
+                            <p class="mb-3 font-normal text-gray-700">Lorem Ipsum has been the industry's standard dummy
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-900/50 rounded-lg shadow">
+                        <img class="rounded-t-lg" src="{{ asset('images/team3.jpg') }}" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SMITH DENI
+                            </h5>
+                            <p class="mb-3 font-normal text-gray-700">Lorem Ipsum has been the industry's standard dummy
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-900/50 rounded-lg shadow">
+                        <img class="rounded-t-lg" src="{{ asset('images/team2.jpg') }}" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">AMMY GRILL
+                            </h5>
+                            <p class="mb-3 font-normal text-gray-700">Lorem Ipsum has been the industry's standard dummy
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-900/50 rounded-lg shadow">
+                        <img class="rounded-t-lg" src="{{ asset('images/team4.jpg') }}" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">KELLY JENNER
+                            </h5>
+                            <p class="mb-3 font-normal text-gray-700">Lorem Ipsum has been the industry's standard dummy
+                            </p>
                         </div>
                     </div>
                 </div>
