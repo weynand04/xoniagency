@@ -92,6 +92,19 @@ forms.forEach((form) => {
                     '<div class="p-4 text-sm text-green-700 bg-green-100 rounded-lg flex items-center space-x-2" role="alert"><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16"><path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/></svg></div><div>Pesan berhasil dikirim!<div></div>';
                 form.appendChild(alertBox);
 
+                // Tangkap data input dari form
+                const nama = form.querySelector('input[name="nama"]').value;
+                const judul = form.querySelector('input[name="judul"]').value;
+                const pesan = form.querySelector('input[name="pesan"]').value;
+
+                // Format pesan untuk WhatsApp
+                const whatsappMessage = `Halo Admin, Nama Saya ${nama}\nTopik yang ingin saya bicarakan: ${judul}\nPesan: ${pesan}`;
+                // Redirect ke WhatsApp Admin (ganti nomor admin dengan yang sesuai)
+                const whatsappURL = `https://api.whatsapp.com/send?phone=6281521550913&text=${encodeURIComponent(
+                    whatsappMessage
+                )}`;
+                window.location.href = whatsappURL;
+
                 // Reset form setelah sukses submit
                 form.reset();
 
