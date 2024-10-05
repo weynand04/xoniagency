@@ -15,3 +15,10 @@ Route::get('/tentang', function () {
         'activePage' => 'tentang'
     ]);
 });
+
+Route::get('/layanan', function () {
+    return view('layanan', [
+        'title' => 'Xoni Agency - Layanan',
+        'activePage' => 'layanan'
+    ]);
+});
