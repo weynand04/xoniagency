@@ -22,3 +22,10 @@ Route::get('/layanan', function () {
         'activePage' => 'layanan'
     ]);
 });
+
+Route::get('/kontak', function () {
+    return view('kontak', [
+        'title' => 'Xoni Agency - Kontak',
+        'activePage' => 'kontak'
+    ]);
+});
