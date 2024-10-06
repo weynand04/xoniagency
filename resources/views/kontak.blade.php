@@ -110,5 +110,12 @@
                 </div>
             </div>
         </section>
+
+        <section>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.337485966178!2d108.98420807496505!3d0.8895352991018577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e3739a25f1bc61%3A0xf17e632b61b7a097!2sSMK%20Negeri%203%20Singkawang!5e0!3m2!1sid!2sid!4v1728198513272!5m2!1sid!2sid"
+                class="h-[50rem] w-full lg:h-[30rem]" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     @endsection
 </x-layout>
