@@ -17,11 +17,13 @@
                 </div>
                 <div class="font-cabin md:pr-14 space-y-4">
                     <h1 class="text-4xl font-semibold tracking-tight uppercase text-gray-900 lg:text-5xl lg:leading-normal">
-                        About "Xoni Agency"</h1>
+                        Tentang "Noken Soft"</h1>
                     <p class="text-md text-gray-700">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, doloribus deleniti. Enim itaque
-                        quae sapiente aspernatur ex, et aliquam doloribus aut est maxime aliquid reprehenderit minus esse!
-                        Quaerat, odio dolores.
+                        PT. NOKEN INOVASI TEKNOLOGI INFORMASI adalah Konsultan Teknologi Informasi yang berkantor di Jayapura, Papua.
+                        Nokensoft telah ada sejak tahun 2013 dan memberikan pelayanan di bidang Teknologi Informasi. Kami menawarkan beberapa
+                        layanan seperti : Pembuatan dan pengembangan aplikasi perkantoran, sistem informasi, dan jaringan komputer. Klien kami
+                        terdiri dari pemerintahan tingkat kabupaten dan provinsi. Selain itu juga dari pihak perguruan tinggi, sekolah,
+                        organisasi ataupun komunitas secara umum.
                     </p>
                     <button
                         class="transition duration-300 bg-sky-800 text-white py-2 px-4 font-bold text-md uppercase hover:bg-white hover:text-sky-800 hover:ring hover:ring-sky-800">Start

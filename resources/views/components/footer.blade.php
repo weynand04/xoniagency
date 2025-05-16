@@ -3,15 +3,14 @@
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-4">
             <div>
                 <div class="text-sky-800 font-poppins flex items-center gap-x-4">
-                    <img src="{{ asset('images/' . 'alanxcode.png') }}" alt="" class="h-20 rounded-full" />
-                    <h1 class="font-semibold text-3xl">Xoni Agency</h1>
+                    <img src="{{ asset('images/' . 'logons.png') }}" alt="" class="h-20 rounded-full" />
+                    <h1 class="font-semibold text-3xl">Noken Soft</h1>
                 </div>
-                <p class="mt-4 max-w-xs text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
-                    nemo!.</p>
+                <p class="mt-4 max-w-xs text-slate-100">Kami adalah Konsultan Teknologi Informasi yang berkantor di Jayapura, Papua.</p>
 
                 <ul class="mt-8 flex gap-6">
                     <li>
-                        <a href="https://facebook.com/alanzagirekber" rel="noreferrer" target="_blank"
+                        <a href="https://facebook.com/#" rel="noreferrer" target="_blank"
                             class="text-sky-800 transition hover:opacity-75">
                             <span class="sr-only">Facebook</span>
 
@@ -24,7 +23,7 @@
                     </li>
 
                     <li>
-                        <a href="https://instagram.com/alanzagi" rel="noreferrer" target="_blank"
+                        <a href="https://instagram.com/#" rel="noreferrer" target="_blank"
                             class="text-sky-800 transition hover:opacity-75">
                             <span class="sr-only">Instagram</span>
 
@@ -37,7 +36,7 @@
                     </li>
 
                     <li>
-                        <a href="https://x.com/" rel="noreferrer" target="_blank"
+                        <a href="https://x.com/#" rel="noreferrer" target="_blank"
                             class="text-sky-800 transition hover:opacity-75">
                             <span class="sr-only">Twitter</span>
 
@@ -49,7 +48,7 @@
                     </li>
 
                     <li>
-                        <a href="https://github.com/alanzagi" rel="noreferrer" target="_blank"
+                        <a href="https://github.com/#" rel="noreferrer" target="_blank"
                             class="text-sky-800 transition hover:opacity-75">
                             <span class="sr-only">GitHub</span>
 
@@ -124,7 +123,7 @@
                                     class="text-sky-800" />
                             </svg>
                             <a href="#" target="_blank" class="text-slate-100 transition hover:opacity-75">
-                                Jl. Kridasana No. 132, Pasiran, Kec. Singkawang Barat, Kota Singkawang </a>
+                                Waena, Heram, Kota Jayapura, Papua., Sentani, Papua, Indonesia 99352 </a>
                         </li>
 
                         <li class="flex items-center gap-x-4">
@@ -136,7 +135,7 @@
                             </svg>
 
                             <a href="https://wa.me/6281521550913" target="_blank"
-                                class="text-slate-100 transition hover:opacity-75"> 0815-2155-0913 </a>
+                                class="text-slate-100 transition hover:opacity-75"> 0815-2155-XXXX </a>
                         </li>
                     </ul>
                 </div>
@@ -149,7 +148,7 @@
                                 Terbaru!</h2>
 
                             <p class="mt-2 text-gray-500 font-poppins pr-8">Masukkan alamat email anda di bawah untuk
-                                berlangganan informasi dan promosi terbaru seputar Xoni Agency.</p>
+                                berlangganan informasi dan promosi terbaru seputar Noken Soft.</p>
                         </div>
                         <div class="col-span-2 lg:col-span-3 lg:flex lg:items-end">
                             <form class="w-full" name="submit-to-google-sheet">
@@ -176,7 +175,7 @@
                                     </svg>
                                     <span class="sr-only">Info</span>
                                     <div><span class="font-medium">Berhasil!</span> Nomormu telah masuk dalam
-                                        daftar berlangganan informasi seputar Xoni Agency.</div>
+                                        daftar berlangganan informasi seputar Noken Soft.</div>
                                 </div>
                             </form>
                         </div>
@@ -185,6 +184,6 @@
             </div>
         </div>
 
-        <p class="text-sm text-slate-100 font-poppins">&copy; 2024. Xoni Agency. All rights reserved.</p>
+        <p class="text-sm text-slate-100 font-poppins">&copy; 2024. Noken Soft. All rights reserved.</p>
     </div>
 </footer>

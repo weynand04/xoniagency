@@ -21,7 +21,7 @@
                         </div>
 
                         <div>
-                            <p class="font-normal text-gray-900/50 text-md">0815-2155-0913</p>
+                            <p class="font-normal text-gray-900/50 text-md">0815-XXXX-XXXX</p>
                         </div>
                     </div>
 
@@ -34,7 +34,7 @@
                         </div>
 
                         <div>
-                            <p class="font-normal text-gray-900/50 text-md">alanzagi@hotmail.com</p>
+                            <p class="font-normal text-gray-900/50 text-md">admin@nokensoft.com</p>
                         </div>
                     </div>
 
@@ -47,7 +47,7 @@
                         </div>
 
                         <div>
-                            <p class="font-normal text-gray-900/50 text-md">Jl. Kridasana No. 132 Kelurahan Pasiran</p>
+                            <p class="font-normal text-gray-900/50 text-md">Waena, Heram, Kota Jayapura, Papua</p>
                         </div>
                     </div>
 
@@ -113,7 +113,7 @@
 
         <section>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.337485966178!2d108.98420807496505!3d0.8895352991018577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e3739a25f1bc61%3A0xf17e632b61b7a097!2sSMK%20Negeri%203%20Singkawang!5e0!3m2!1sid!2sid!4v1728198513272!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127544.95843245753!2d140.39692640304568!3d-2.578105740937953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf1ef7e0b01ab%3A0x3acaa5217a07a230!2sNOKENSOFT%2C%20Jasa%20pembuatan%20website%2C%20Aplikasi%2C%20Sistem%20dll!5e0!3m2!1sid!2sid!4v1746955870020!5m2!1sid!2sid"
                 class="h-[50rem] w-full lg:h-[30rem]" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>

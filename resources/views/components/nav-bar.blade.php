@@ -1,8 +1,8 @@
 <nav class="bg-transparent border-gray-200 absolute top-0 left-0 w-full z-50 font-ubuntu">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="{{ asset('images/alanxcode.png') }}" class="h-10 rounded-full" alt="ALANxCODE Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap text-slate-100">Xoni Agency</span>
+            <img src="{{ asset('images/logons.png') }}" class="h-10 rounded-full" alt="ALANxCODE Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-slate-100">Noken Soft</span>
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
