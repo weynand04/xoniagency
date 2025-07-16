@@ -2,30 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index', [
-        'title' => 'Xoni Agency - Beranda',
-        'activePage' => 'index'
-    ]);
-});
+Route::view('/', 'welcome');
 
-Route::get('/tentang', function () {
-    return view('tentang', [
-        'title' => 'Xoni Agency - Tentang',
-        'activePage' => 'tentang'
-    ]);
-});
+Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
-Route::get('/layanan', function () {
-    return view('layanan', [
-        'title' => 'Xoni Agency - Layanan',
-        'activePage' => 'layanan'
-    ]);
-});
+Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
 
-Route::get('/kontak', function () {
-    return view('kontak', [
-        'title' => 'Xoni Agency - Kontak',
-        'activePage' => 'kontak'
-    ]);
-});
+require __DIR__.'/auth.php';
