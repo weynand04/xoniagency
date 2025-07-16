@@ -125,7 +125,7 @@
                 <div class="text-center max-w-7xl px-4 lg:px-8 lg:py-16">
                     <div class="mt-8 mb-8 grid grid-cols-1 gap-14 lg:grid-cols-4 lg:grid-rows-1 lg:gap-20">
                         <div class="space-y-2">
-                            <h1 class="text-6xl text-slate-100 font-semibold counter" data-target="13"></h1>
+                            <h1 class="text-6xl text-slate-100 font-semibold counter" data-target="13">0</h1>
                             <p class="text-slate-100 uppercase font-semibold whitespace-nowrap">Business Years</p>
                         </div>
                         <div class="space-y-2">
