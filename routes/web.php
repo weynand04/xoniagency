@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\Login;
+use App\Http\Controllers\IndexController;
 
 require __DIR__ . '/auth.php';
 
+
+Route::get('/index-edit', [IndexController::class, 'edit'])->name('index.edit');
+Route::post('/index-edit', [IndexController::class, 'update'])->name('index.update');
 
 Route::get('/', function () {
     return view('index', [
