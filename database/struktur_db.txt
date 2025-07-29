@@ -1,0 +1,59 @@
+khusus halaman index
+
+main_index_1
+- h1
+- h2
+- p 
+- button
+
+section_index_2
+- h2
+- p
+(ini card ada 3 jumlahnya)
+- img
+- h3
+- p 
+
+section_index_3
+-h2
+-p
+-button
+
+section_index_4
+-h2
+-p
+-button
+(ini card ada 4 jumlahnya)
+- img
+- h3
+- p 
+
+section_index_5
+(ini card ada 4 jumlahnya)
+-h2
+-p
+
+section_index_6
+h2
+p
+(ini card ada 4 jumlahnya)
+img
+h3
+p
+
+section_index_7
+h2
+p
+button
+(ini card ada 3 jumlahnya)
+h3
+span.matauang
+span.jumlahuang
+span.feature (ada 7)
+
+section_index_8
+h2
+(ini card ada 3 jumlahnya)
+img
+h3
+p

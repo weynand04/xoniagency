@@ -34,7 +34,7 @@ new class extends Component {
                     </x-nav-link>
 
                     <x-nav-link :href="route('index-edit')" :active="request()->routeIs('index-edit')" wire:navigate>
-                        {{ __('Home') }}
+                        {{ __('Beranda') }}
                     </x-nav-link>
                 </div>
             </div>
