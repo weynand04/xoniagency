@@ -48,4 +48,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/index-edit', function () {
+        return view('index-edit', [
+            'title' => 'Xoni Agency - Beranda',
+            'activePage' => 'index-edit'
+        ]);
+    })->name('index-edit');
 });
