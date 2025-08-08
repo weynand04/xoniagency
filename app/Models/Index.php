@@ -2,11 +2,16 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\BerandaController;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Index extends Model
 {
     use HasFactory;
+
+    protected $table = 'indexes';
 
     protected $fillable = [
         'main_h1',

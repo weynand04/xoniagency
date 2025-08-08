@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :indexData="$indexData">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Dashboard &raquo; Edit Index Page
@@ -15,18 +15,24 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('index.update') }}">
+                    <form method="POST" action="{{ route('index-update') }}">
                         @csrf
 
                         <div class="mb-4">
                             <label for="main_h1">Main H1</label>
                             <input type="text" name="main_h1" class="block w-full border"
-                                value="{{ old('main_h1', $index->main_h1) }}">
+                                value="{{ old('main_h1', $indexData->main_h1) }}">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="main_h2">Main H2</label>
+                            <input type="text" name="main_h2" class="block w-full border"
+                                value="{{ old('main_h2', $indexData->main_h2) }}">
                         </div>
 
                         <div class="mb-4">
                             <label for="main_p">Main Paragraph</label>
-                            <textarea name="main_p" class="block w-full border">{{ old('main_p', $index->main_p) }}</textarea>
+                            <textarea name="main_p" class="block w-full border">{{ old('main_p', $indexData->main_p) }}</textarea>
                         </div>
 
                         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">

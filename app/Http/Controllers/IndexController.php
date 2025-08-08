@@ -2,33 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\BerandaController;
+
 use App\Models\Index;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
 
-    public function edit()
+    public function index()
     {
         // Ambil data index, kalau belum ada, buat kosong dulu
-        $index = Index::firstOrCreate([], []);
+        $indexData = Index::firstOrCreate([], []);
 
-        return view('index-edit', compact('index'));
+        return view('index-edit', [
+            'title' => 'Xoni Agency - Beranda',
+            'activePage' => 'index-edit',
+            'indexData' => $indexData
+        ]);
     }
 
     public function update(Request $request)
     {
+        $request->validate([
+            'main_h1' => 'required|string|max:255',
+            'main_h2' => 'required|string|max:255',
+            'main_p'  => 'nullable|string',
+        ]);
+
         $index = Index::first();
 
         $data = $request->all();
 
-        // Simpan array sebagai json
-        $data['sec2_cards'] = json_encode($request->input('sec2_cards'));
-        $data['sec4_cards'] = json_encode($request->input('sec4_cards'));
-        $data['sec5_cards'] = json_encode($request->input('sec5_cards'));
-        $data['sec6_cards'] = json_encode($request->input('sec6_cards'));
-        $data['sec7_cards'] = json_encode($request->input('sec7_cards'));
-        $data['sec8_cards'] = json_encode($request->input('sec8_cards'));
+        // Encode array menjadi JSON
+        foreach (['sec2_cards', 'sec4_cards', 'sec5_cards', 'sec6_cards', 'sec7_cards', 'sec8_cards'] as $field) {
+            if ($request->has($field)) {
+                $data[$field] = json_encode($request->input($field));
+            }
+        }
 
         $index->update($data);
 

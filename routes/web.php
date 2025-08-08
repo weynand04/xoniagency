@@ -3,19 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\Login;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\BerandaController;
 
 require __DIR__ . '/auth.php';
 
 
-Route::get('/index-edit', [IndexController::class, 'edit'])->name('index.edit');
+Route::get('/index-edit', [IndexController::class, 'index'])->name('index.edit');
 Route::post('/index-edit', [IndexController::class, 'update'])->name('index.update');
 
-Route::get('/', function () {
-    return view('index', [
-        'title' => 'Xoni Agency - Beranda',
-        'activePage' => 'index'
-    ]);
-});
+Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 
 Route::get('/tentang', function () {
     return view('tentang', [
@@ -53,10 +49,6 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/index-edit', function () {
-        return view('index-edit', [
-            'title' => 'Xoni Agency - Beranda',
-            'activePage' => 'index-edit'
-        ]);
-    })->name('index-edit');
+    Route::get('/index-edit', [IndexController::class, 'index'])->name('index-edit');
+    Route::post('/index-update', [IndexController::class, 'update'])->name('index-update');
 });

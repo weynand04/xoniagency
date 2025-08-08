@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 
     <x-head :title="$title"></x-head>
 
     <body>
-        <x-nav-bar :activePage="$activePage"></x-nav-bar>
+        <x-nav-bar :activePage="$activePage" :indexData="$indexData"></x-nav-bar>
 
         @yield('page')
 
