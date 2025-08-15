@@ -35,6 +35,18 @@
                             <textarea name="main_p" class="block w-full border">{{ old('main_p', $indexData->main_p) }}</textarea>
                         </div>
 
+                        <div class="mb-4">
+                            <label for="main_button_text">Main Button Text</label>
+                            <input type="text" name="main_button_text" class="block w-full border"
+                                value="{{ old('main_button_text', $indexData->main_button_text) }}">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="main_button_link">Main Button Link</label>
+                            <input type="text" name="main_button_link" class="block w-full border"
+                                value="{{ old('main_button_link', $indexData->main_button_link) }}">
+                        </div>
+
                         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
                             Simpan
                         </button>

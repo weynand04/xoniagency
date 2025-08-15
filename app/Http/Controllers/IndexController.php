@@ -28,6 +28,8 @@ class IndexController extends Controller
             'main_h1' => 'required|string|max:255',
             'main_h2' => 'required|string|max:255',
             'main_p'  => 'nullable|string',
+            'main_button_text' => 'nullable|string|max:255',
+            'main_button_link' => 'nullable|string|max:255',
         ]);
 
         $index = Index::first();

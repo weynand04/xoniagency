@@ -7,9 +7,10 @@
                 <h1 class="text-5xl font-bold uppercase lg:text-7xl lg:max-w-2xl">{{ $indexData->main_h1 }}
                 </h1>
                 <p class="text-md font-medium text-base md:pr-80 ">{{ $indexData->main_p }}</p>
-                <button
-                    class="transition duration-300 bg-slate-100 text-sky-800 py-2 px-4 rounded-xl font-bold text-md uppercase hover:bg-sky-800 hover:text-slate-100">Start
-                    Now</button>
+                <a href="{{ $indexData->main_button_link }}"
+                    class="transition duration-300 bg-slate-100 text-sky-800 py-2 px-4 rounded-xl font-bold text-md uppercase inline-block hover:bg-sky-800 hover:text-slate-100">
+                    {{ $indexData->main_button_text }}
+                </a>
             </div>
         </main>
 
