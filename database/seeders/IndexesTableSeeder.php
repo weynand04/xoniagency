@@ -49,10 +49,10 @@ class IndexesTableSeeder extends Seeder
 
             // Section 5 (4 card berisi h2 dan p)
             'sec5_cards' => json_encode([
-                ['h2' => 'Kecepatan', 'p' => 'Proses kerja yang efisien dan cepat.'],
-                ['h2' => 'Kualitas', 'p' => 'Hasil pekerjaan berkualitas tinggi.'],
-                ['h2' => 'Inovasi', 'p' => 'Selalu mengikuti perkembangan teknologi.'],
-                ['h2' => 'Dukungan', 'p' => 'Layanan support 24/7.']
+                ['h2' => 'Kecepatan', 'p' => 'Proses kerja yang efisien dan cepat.', 'count' => 100],
+                ['h2' => 'Kualitas', 'p' => 'Hasil pekerjaan berkualitas tinggi.', 'count' => 110],
+                ['h2' => 'Inovasi', 'p' => 'Selalu mengikuti perkembangan teknologi.', 'count' => 100],
+                ['h2' => 'Dukungan', 'p' => 'Layanan support 24/7.', 'count' => 120]
             ]),
 
             // Section 6 (4 card img, h3, p)
@@ -70,9 +70,9 @@ class IndexesTableSeeder extends Seeder
             'sec7_p' => 'Apa kata mereka tentang kami.',
             'sec7_button_text' => 'Lihat Semua Testimoni',
             'sec7_cards' => json_encode([
-                ['name' => 'Andi', 'feedback' => 'Pelayanan cepat dan profesional.'],
-                ['name' => 'Budi', 'feedback' => 'Hasil desain sangat memuaskan.'],
-                ['name' => 'Citra', 'feedback' => 'Tim yang ramah dan membantu.']
+                ['name' => 'Andi', 'feedback' => 'Pelayanan cepat dan profesional.', 'profile' => '/images/team1.jpg'],
+                ['name' => 'Budi', 'feedback' => 'Hasil desain sangat memuaskan.', 'profile' => '/images/team1.jpg'],
+                ['name' => 'Citra', 'feedback' => 'Tim yang ramah dan membantu.', 'profile' => '/images/team1.jpg']
             ]),
 
             // Section 8 (3 card)
