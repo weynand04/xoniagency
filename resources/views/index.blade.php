@@ -49,8 +49,8 @@
             <div class="py-20 px-4 grid grid-cols-1 gap-y-8 md:grid-cols-2 md:space-x-4 lg:px-20">
                 <div class="relative overflow-hidden" style="padding-top: 56.25%;">
                     <iframe class="absolute top-0 left-0 w-full h-full"
-                        src="https://www.youtube.com/embed/rSTO0VrV38Y?si=Ix2f184YVrkpnKqI" title="YouTube video player"
-                        frameborder="0"
+                        src="{{ $indexData->sec3_video_link ?? 'https://www.youtube.com/embed/defaultVideo' }}"
+                        title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
@@ -59,10 +59,13 @@
                     <h2 class="text-5xl font-medium">{{ $indexData->sec3_h2 }}</h2>
                     <p class="text-sm opacity-60">{{ $indexData->sec3_p }}</p>
                     <a href="{{ $indexData->sec3_button_link }}"
-                        class="inline-block transition duration-300 bg-white text-sky-800 py-2 px-4 rounded-xl font-bold text-md uppercase hover:bg-sky-800 hover:text-white">{{ $indexData->sec3_button_text }}</a>
+                        class="inline-block transition duration-300 bg-white text-sky-800 py-2 px-4 rounded-xl font-bold text-md uppercase hover:bg-sky-800 hover:text-white">
+                        {{ $indexData->sec3_button_text }}
+                    </a>
                 </div>
             </div>
         </section>
+
 
         <section class="bg-white font-ubuntu">
             <div class="py-20 px-6 grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-4 lg:px-20">

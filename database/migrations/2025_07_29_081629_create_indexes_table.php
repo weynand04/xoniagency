@@ -31,6 +31,7 @@ return new class extends Migration
             $table->text('sec3_p')->nullable();
             $table->string('sec3_button_text')->nullable();
             $table->string('sec3_button_link')->nullable();
+            $table->string('sec3_video_link')->nullable();
 
             // Section 4 (4 card)
             $table->string('sec4_h2')->nullable();

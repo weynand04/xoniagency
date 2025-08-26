@@ -26,6 +26,7 @@ class Index extends Model
         'sec3_p',
         'sec3_button_text',
         'sec3_button_link',
+        'sec3_video_link',
         'sec4_h2',
         'sec4_p',
         'sec4_button_text',

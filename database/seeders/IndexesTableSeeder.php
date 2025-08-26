@@ -34,6 +34,7 @@ class IndexesTableSeeder extends Seeder
             'sec3_p' => 'Kami percaya kolaborasi membawa hasil terbaik.',
             'sec3_button_text' => 'Hubungi Kami',
             'sec3_button_link' => '/contact',
+            'sec3_video_link' => '',
 
             // Section 4 (4 card)
             'sec4_h2' => 'Portofolio Kami',
