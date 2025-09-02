@@ -155,6 +155,77 @@
                                 </div>
                             </div>
 
+                            {{-- SECTION 4 --}}
+                            <div class="border-t pt-6">
+                                <h3 class="font-semibold mb-3">Section 4</h3>
+
+                                <div class="mb-4">
+                                    <label class="block mb-1" for="sec4_h2">Section 4 H2</label>
+                                    <input type="text" name="sec4_h2" id="sec4_h2"
+                                        class="block w-full border p-2 rounded"
+                                        value="{{ old('sec4_h2', $indexData->sec4_h2) }}">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="block mb-1" for="sec4_p">Section 4 Paragraph</label>
+                                    <textarea name="sec4_p" id="sec4_p" class="block w-full border p-2 rounded" rows="3">{{ old('sec4_p', $indexData->sec4_p) }}</textarea>
+                                </div>
+
+                                <div class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block mb-1" for="sec4_button_text">Button Text</label>
+                                        <input type="text" name="sec4_button_text" id="sec4_button_text"
+                                            class="block w-full border p-2 rounded"
+                                            value="{{ old('sec4_button_text', $indexData->sec4_button_text) }}">
+                                    </div>
+                                    <div>
+                                        <label class="block mb-1" for="sec4_button_link">Button Link</label>
+                                        <input type="text" name="sec4_button_link" id="sec4_button_link"
+                                            class="block w-full border p-2 rounded"
+                                            value="{{ old('sec4_button_link', $indexData->sec4_button_link) }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- SECTION 4 CARDS --}}
+                            <div x-data="cardsEditor()" x-init="init(@js(old('sec4_cards', $indexData->sec4_cards ?? [])))" class="border-t pt-6">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="font-semibold">Section 4 Cards</h4>
+                                    <button type="button" @click="add()"
+                                        class="px-3 py-1.5 rounded bg-blue-600 text-white">+ Tambah Card</button>
+                                </div>
+
+                                <template x-if="cards.length === 0">
+                                    <div class="text-sm text-gray-500 mb-3">Belum ada card. Klik “Tambah Card”.</div>
+                                </template>
+
+                                <div class="space-y-4">
+                                    <template x-for="(card, i) in cards" :key="i">
+                                        <div class="p-4 border rounded space-y-3">
+                                            <div class="flex items-center justify-between">
+                                                <div class="font-medium">Card <span x-text="i+1"></span></div>
+                                                <button type="button" @click="remove(i)"
+                                                    class="text-red-600 hover:underline">Hapus</button>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div>
+                                                    <label class="block mb-1">Title</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec4_cards[${i}][title]`" x-model="card.title">
+                                                </div>
+                                                <div>
+                                                    <label class="block mb-1">Image (path)</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec4_cards[${i}][image]`" x-model="card.image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+
+
                             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
                                 Simpan
                             </button>
@@ -164,5 +235,4 @@
             </div>
         </div>
     </x-slot>
-
 </x-app-layout>
