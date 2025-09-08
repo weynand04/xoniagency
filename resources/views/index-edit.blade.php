@@ -225,6 +225,123 @@
                                 </div>
                             </div>
 
+                            {{-- SECTION 5 --}}
+                            <div x-data="cardsEditor()" x-init="init(@js(old('sec5_cards', $indexData->sec5_cards ?? [])))" class="border-t pt-6">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="font-semibold">Section 5 Cards (Counter)</h4>
+                                    <button type="button" @click="add({count:'',h2:''})"
+                                        class="px-3 py-1.5 rounded bg-blue-600 text-white">+ Tambah</button>
+                                </div>
+
+                                <template x-if="cards.length === 0">
+                                    <div class="text-sm text-gray-500">Belum ada card.</div>
+                                </template>
+
+                                <div class="space-y-4">
+                                    <template x-for="(card, i) in cards" :key="i">
+                                        <div class="p-4 border rounded space-y-3">
+                                            <div class="grid grid-cols-2 gap-4">
+                                                <div>
+                                                    <label class="block mb-1">Count</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec5_cards[${i}][count]`" x-model="card.count">
+                                                </div>
+                                                <div>
+                                                    <label class="block mb-1">Heading</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec5_cards[${i}][h2]`" x-model="card.h2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                            {{-- SECTION 6 --}}
+                            <div class="border-t pt-6">
+                                <h3 class="font-semibold mb-3">Section 6</h3>
+                                <div class="mb-4">
+                                    <label class="block mb-1">Heading</label>
+                                    <input type="text" name="sec6_h2" class="block w-full border p-2 rounded"
+                                        value="{{ old('sec6_h2', $indexData->sec6_h2) }}">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block mb-1">Paragraph</label>
+                                    <textarea name="sec6_p" class="block w-full border p-2 rounded" rows="2">{{ old('sec6_p', $indexData->sec6_p) }}</textarea>
+                                </div>
+                            </div>
+
+                            <div x-data="cardsEditor()" x-init="init(@js(old('sec6_cards', $indexData->sec6_cards ?? [])))" class="border-t pt-6">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="font-semibold">Section 6 Cards</h4>
+                                    <button type="button" @click="add({h3:'',p:'',img:''})"
+                                        class="px-3 py-1.5 rounded bg-blue-600 text-white">+ Tambah</button>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <template x-for="(card,i) in cards" :key="i">
+                                        <div class="p-4 border rounded space-y-3">
+                                            <div class="grid grid-cols-3 gap-4">
+                                                <div>
+                                                    <label>Title</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec6_cards[${i}][h3]`" x-model="card.h3">
+                                                </div>
+                                                <div>
+                                                    <label>Paragraph</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec6_cards[${i}][p]`" x-model="card.p">
+                                                </div>
+                                                <div>
+                                                    <label>Image</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec6_cards[${i}][img]`" x-model="card.img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+
+                            {{-- SECTION 7 --}}
+                            <div class="border-t pt-6">
+                                <h3 class="font-semibold mb-3">Section 7</h3>
+                                <div class="mb-4">
+                                    <label class="block mb-1">Heading</label>
+                                    <input type="text" name="sec7_h2" class="block w-full border p-2 rounded"
+                                        value="{{ old('sec7_h2', $indexData->sec7_h2) }}">
+                                </div>
+                            </div>
+
+                            <div x-data="cardsEditor()" x-init="init(@js(old('sec7_cards', $indexData->sec7_cards ?? [])))" class="border-t pt-6">
+                                <div class="flex items-center justify-between mb-3">
+                                    <h4 class="font-semibold">Section 7 Testimonials</h4>
+                                    <button type="button" @click="add({feedback:'',profile:'',name:''})"
+                                        class="px-3 py-1.5 rounded bg-blue-600 text-white">+ Tambah</button>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <template x-for="(card,i) in cards" :key="i">
+                                        <div class="p-4 border rounded space-y-3">
+                                            <label>Feedback</label>
+                                            <textarea class="w-full border p-2 rounded" :name="`sec7_cards[${i}][feedback]`" x-model="card.feedback"></textarea>
+                                            <div class="grid grid-cols-2 gap-4">
+                                                <div>
+                                                    <label>Profile Image</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec7_cards[${i}][profile]`" x-model="card.profile">
+                                                </div>
+                                                <div>
+                                                    <label>Name</label>
+                                                    <input type="text" class="w-full border p-2 rounded"
+                                                        :name="`sec7_cards[${i}][name]`" x-model="card.name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+
+
 
                             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
                                 Simpan
