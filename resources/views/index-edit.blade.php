@@ -1,7 +1,7 @@
-<x-app-layout :indexData="$indexData">
+<x-app-layout :indexData="$indexData" :title="$title">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Dashboard &raquo; Edit Index Page
+            Dashboard &raquo; Edit {{ $title }}
         </h2>
 
         <div class="py-12">

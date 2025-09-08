@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ServicesPage extends Model
 {
+    use HasFactory;
+
+    protected $table = 'services_pages';
+
     protected $fillable = [
         'hero_h1',
         'hero_h2',

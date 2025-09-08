@@ -37,7 +37,7 @@ class IndexController extends Controller
         ]);
 
         return view('index-edit', [
-            'title' => 'Xoni Agency - Beranda',
+            'title' => 'Beranda Page',
             'activePage' => 'index-edit',
             'indexData' => $indexData
         ]);
