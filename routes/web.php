@@ -5,7 +5,7 @@ use App\Livewire\Auth\Login;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\LayananController;
-use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\LayananEditController;
 
 require __DIR__ . '/auth.php';
 
@@ -13,7 +13,8 @@ require __DIR__ . '/auth.php';
 Route::get('/index-edit', [IndexController::class, 'index'])->name('index.edit');
 Route::post('/index-edit', [IndexController::class, 'update'])->name('index.update');
 
-Route::get('/layanan-edit', [ServicesController::class, 'index'])->name('layanan.edit');
+Route::get('/layanan-edit', [LayananEditController::class, 'index'])->name('layanan.edit');
+Route::post('/layanan-edit', [LayananEditController::class, 'update'])->name('layanan.update');
 
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 
