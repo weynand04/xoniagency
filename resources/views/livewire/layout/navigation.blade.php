@@ -37,8 +37,16 @@ new class extends Component {
                         {{ __('Beranda') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('tentang.edit')" :active="request()->routeIs('tentang.edit')" wire:navigate>
+                        {{ __('Tentang') }}
+                    </x-nav-link>
+
                     <x-nav-link :href="route('layanan.edit')" :active="request()->routeIs('layanan.edit')" wire:navigate>
                         {{ __('Layanan') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('kontak.edit')" :active="request()->routeIs('kontak.edit')" wire:navigate>
+                        {{ __('Kontak') }}
                     </x-nav-link>
                 </div>
             </div>

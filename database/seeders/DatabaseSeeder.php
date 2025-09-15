@@ -18,5 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             LayananSeeder::class,
         ]);
+        $this->call([
+            TentangSeeder::class,
+        ]);
     }
 }
