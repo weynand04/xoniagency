@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('tentang', function (Blueprint $table) {
             $table->id();
-            $table->string('key')->unique(); // key untuk identifikasi data
-            $table->longText('value'); // simpan JSON atau teks panjang
+            $table->string('key')->unique(); // key unik untuk setiap bagian halaman
+            $table->longText('value');       // JSON data
             $table->timestamps();
         });
     }

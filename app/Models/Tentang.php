@@ -9,8 +9,7 @@ class Tentang extends Model
     protected $table = 'tentang';
     protected $fillable = ['key', 'value'];
 
-    // otomatis decode JSON
     protected $casts = [
-        'value' => 'array',
+        'value' => 'array', // otomatis decode JSON ke array
     ];
 }

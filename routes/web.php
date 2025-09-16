@@ -7,6 +7,7 @@ use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KontakEditController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\LayananEditController;
+use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TentangEditController;
 
 require __DIR__ . '/auth.php';
@@ -24,14 +25,7 @@ Route::get('/kontak-edit', [KontakEditController::class, 'index'])->name('kontak
 Route::post('/kontak-edit', [KontakEditController::class, 'update'])->name('kontak.update');
 
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');
-
-Route::get('/tentang', function () {
-    return view('tentang', [
-        'title' => 'Xoni Agency - Tentang',
-        'activePage' => 'tentang'
-    ]);
-});
-
+Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
 Route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
 
 

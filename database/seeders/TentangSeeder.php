@@ -58,47 +58,47 @@ class TentangSeeder extends Seeder
                         'price' => 49.00,
                         'duration' => '/month',
                         'features' => [
-                            '2 team members',
-                            '20GB Cloud storage',
-                            'Integration help',
+                            '2 team members' => true,
+                            '20GB Cloud storage' => true,
+                            'Integration help' => true,
                             'Sketch Files' => false,
                             'API Access' => false,
                             'Complete documentation' => false,
                             '24×7 phone & email support' => false,
-                        ]
+                        ],
                     ],
                     [
                         'name' => 'Pro Plan',
                         'price' => 99.00,
                         'duration' => '/month',
                         'features' => [
-                            '5 team members',
-                            '100GB Cloud storage',
-                            'Integration help',
+                            '5 team members' => true,
+                            '100GB Cloud storage' => true,
+                            'Integration help' => true,
                             'Sketch Files' => true,
                             'API Access' => true,
                             'Complete documentation' => false,
                             '24×7 phone & email support' => false,
-                        ]
+                        ],
                     ],
                     [
                         'name' => 'Enterprise Plan',
                         'price' => 199.00,
                         'duration' => '/month',
                         'features' => [
-                            'Unlimited team members',
-                            '1TB Cloud storage',
-                            'Integration help',
+                            'Unlimited team members' => true,
+                            '1TB Cloud storage' => true,
+                            'Integration help' => true,
                             'Sketch Files' => true,
                             'API Access' => true,
                             'Complete documentation' => true,
                             '24×7 phone & email support' => true,
-                        ]
-                    ]
+                        ],
+                    ],
                 ]),
                 'created_at' => now(),
                 'updated_at' => now(),
-            ]
+            ],
         ]);
     }
 }
