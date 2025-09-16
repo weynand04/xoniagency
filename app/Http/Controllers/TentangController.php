@@ -8,15 +8,20 @@ class TentangController extends Controller
 {
     public function index()
     {
-        return view('tentang', [
-            'title' => 'Xoni Agency - Tentang',
-            'activePage' => 'tentang',
+        $hero = Tentang::where('key', 'hero_section')->first();
+        $skills = Tentang::where('key', 'skills')->first();
+        $counters = Tentang::where('key', 'counters')->first();
+        $plans = Tentang::where('key', 'plans')->first();
 
-            // Ambil data berdasarkan key
-            'hero' => Tentang::where('key', 'hero_section')->first(),
-            'skills' => Tentang::where('key', 'skills')->first(),
-            'counters' => Tentang::where('key', 'counters')->first(),
-            'plans' => Tentang::where('key', 'plans')->first(),
+        return view('tentang', [
+            'title'        => 'Xoni Agency - Tentang',
+            'activePage'   => 'tentang',
+
+            // JSON decode → Array
+            'heroData'     => $hero->value ?? [],
+            'skillsData'   => $skills->value ?? [],
+            'countersData' => $counters->value ?? [],
+            'plansData'    => $plans->value ?? [],
         ]);
     }
 }
