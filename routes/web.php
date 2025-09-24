@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Auth\Login;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\KontakController;
 use App\Http\Controllers\KontakEditController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\LayananEditController;
@@ -27,14 +28,9 @@ Route::post('/kontak-edit', [KontakEditController::class, 'update'])->name('kont
 Route::get('/', [BerandaController::class, 'index'])->name('beranda');
 Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
 Route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
+Route::get('/kontak', [KontakController::class, 'index'])->name('kontak');
 
 
-Route::get('/kontak', function () {
-    return view('kontak', [
-        'title' => 'Xoni Agency - Kontak',
-        'activePage' => 'kontak'
-    ]);
-});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
