@@ -12,57 +12,25 @@
             <div class="py-20 px-8 space-y-6 lg:px-20">
                 <div class="text-center grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-x-8">
                     <div class="p-10 bg-white space-y-4 lg:border-r-2 lg:border-b-2 lg:border-gray-900">
-                        <div>
-                            <a href="#">
-                                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase ">
-                                    Whatsapp
-                                </h5>
-                            </a>
-                        </div>
-
-                        <div>
-                            <p class="font-normal text-gray-900/50 text-md">0815-2155-0913</p>
-                        </div>
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase">Whatsapp</h5>
+                        <p class="font-normal text-gray-900/50 text-md">{{ $kontak->whatsapp ?? '-' }}</p>
                     </div>
 
                     <div class="p-10 bg-white space-y-4 lg:border-l-2 lg:border-b-2 lg:border-gray-900">
-                        <div>
-                            <a href="#">
-                                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase">Email
-                                </h5>
-                            </a>
-                        </div>
-
-                        <div>
-                            <p class="font-normal text-gray-900/50 text-md">alanzagi@hotmail.com</p>
-                        </div>
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase">Email</h5>
+                        <p class="font-normal text-gray-900/50 text-md">{{ $kontak->email ?? '-' }}</p>
                     </div>
 
                     <div class="p-10 bg-white space-y-4 lg:border-t-2 lg:border-r-2 lg:border-gray-900">
-                        <div>
-                            <a href="#">
-                                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase">ALAMAT
-                                </h5>
-                            </a>
-                        </div>
-
-                        <div>
-                            <p class="font-normal text-gray-900/50 text-md">Jl. Kridasana No. 132 Kelurahan Pasiran</p>
-                        </div>
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase">Alamat</h5>
+                        <p class="font-normal text-gray-900/50 text-md">{{ $kontak->alamat ?? '-' }}</p>
                     </div>
 
                     <div class="p-10 bg-white space-y-4 lg:border-t-2 lg:border-l-2 lg:border-gray-900">
-                        <div>
-                            <a href="#">
-                                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase">Jam Kerja
-                                </h5>
-                            </a>
-                        </div>
-
-                        <div>
-                            <p class="font-normal text-gray-900/50 text-md">08:00 - 20:00 WIB</p>
-                        </div>
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 uppercase">Jam Kerja</h5>
+                        <p class="font-normal text-gray-900/50 text-md">{{ $kontak->jam_kerja ?? '-' }}</p>
                     </div>
+
                 </div>
             </div>
         </main>

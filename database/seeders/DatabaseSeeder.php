@@ -21,5 +21,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TentangSeeder::class,
         ]);
+        $this->call([
+            KontakSeeder::class,
+        ]);
     }
 }
