@@ -14,7 +14,8 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="{{ route('index-update') }}" class="space-y-6">
+                        <form method="POST" action="{{ route('index-update') }}" class="space-y-6"
+                            enctype="multipart/form-data">
                             @csrf
 
                             {{-- Flash message --}}
@@ -215,10 +216,11 @@
                                                         :name="`sec4_cards[${i}][title]`" x-model="card.title">
                                                 </div>
                                                 <div>
-                                                    <label class="block mb-1">Image (path)</label>
-                                                    <input type="text" class="w-full border p-2 rounded"
-                                                        :name="`sec4_cards[${i}][image]`" x-model="card.image">
+                                                    <label class="block mb-1">Image</label>
+                                                    <input type="file" class="w-full border p-2 rounded"
+                                                        :name="`sec4_cards[${i}][image]`">
                                                 </div>
+
                                             </div>
                                         </div>
                                     </template>

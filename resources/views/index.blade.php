@@ -80,8 +80,9 @@
                     @foreach ($indexData->sec4_cards as $card)
                         <div class="space-y-4 border border-gray-900/50 p-6 text-center">
                             <div class="flex justify-center">
-                                <img src="{{ asset('storage' . $card['image']) }}" alt="{{ $card['title'] }}"
+                                <img src="{{ asset('storage/' . $card['image']) }}" alt="{{ $card['title'] }}"
                                     class="w-10 h-10 mb-3">
+
                             </div>
                             <h3 class="mb-2 text-xl font-semibold tracking-tight text-gray-900">
                                 {{ $card['title'] }}
