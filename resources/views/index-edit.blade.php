@@ -295,8 +295,9 @@
                                                 </div>
                                                 <div>
                                                     <label>Image</label>
-                                                    <input type="text" class="w-full border p-2 rounded"
-                                                        :name="`sec6_cards[${i}][img]`" x-model="card.img">
+                                                    <input type="file" class="w-full border p-2 rounded"
+                                                        :name="`sec6_cards[${i}][img]`">
+
                                                 </div>
                                             </div>
                                         </div>
@@ -329,8 +330,8 @@
                                             <div class="grid grid-cols-2 gap-4">
                                                 <div>
                                                     <label>Profile Image</label>
-                                                    <input type="text" class="w-full border p-2 rounded"
-                                                        :name="`sec7_cards[${i}][profile]`" x-model="card.profile">
+                                                    <input type="file" class="w-full border p-2 rounded"
+                                                        :name="`sec7_cards[${i}][profile]`">
                                                 </div>
                                                 <div>
                                                     <label>Name</label>

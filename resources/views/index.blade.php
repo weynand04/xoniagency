@@ -120,7 +120,7 @@
                 <div class="grid grid-cols-1 text-center gap-y-6 lg:grid-cols-4 lg:gap-x-4">
                     @foreach ($indexData->sec6_cards as $card)
                         <div class="bg-white border border-gray-900/50 rounded-lg shadow">
-                            <img class="rounded-t-lg" src="{{ asset('storage' . $card['img']) }}" alt="" />
+                            <img class="rounded-t-lg" src="{{ asset('storage/' . $card['img']) }}" alt="" />
                             <div class="p-5">
                                 <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $card['h3'] }}</h3>
                                 <p class="mb-3 font-normal text-gray-700">{{ $card['p'] }}
@@ -148,7 +148,7 @@
                                 </p>
                             </blockquote>
                             <figcaption class="flex flex-col items-center justify-center text-center">
-                                <img class="rounded-full w-9 h-9 mb-2" src="{{ asset('storage' . $card['profile']) }}"
+                                <img class="rounded-full w-9 h-9 mb-2" src="{{ asset('storage/' . $card['profile']) }}"
                                     alt="profile picture">
                                 <div class="font-medium">
                                     <div>{{ $card['name'] }}</div>
