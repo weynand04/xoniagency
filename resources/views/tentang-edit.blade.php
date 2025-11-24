@@ -8,143 +8,219 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
-                        <form method="POST" action="{{ route('tentang.update') }}">
+                        <form method="POST" action="{{ route('tentang.update') }}" class="space-y-6">
                             @csrf
 
-                            {{-- FLASH MESSAGE --}}
+                            {{-- Flash Message --}}
                             @if (session('success'))
-                                <div class="p-3 mb-3 bg-green-100 text-green-700 rounded">
-                                    {{ session('success') }}
+                                <div class="mb-4 p-3 rounded bg-green-100 text-green-700 border border-green-300">
+                                    ✅ {{ session('success') }}
                                 </div>
                             @endif
 
-                            {{-- HERO SECTION --}}
-                            <div class="border-b pb-4 mb-6">
-                                <h3 class="text-lg font-bold mb-4">Hero Section</h3>
-                                <div class="mb-3">
-                                    <label class="block mb-1">Judul</label>
-                                    <input type="text" name="hero_title" class="w-full border p-2 rounded"
-                                        value="{{ old('hero_title', $tentangData['hero_section']->value['title'] ?? '') }}">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="block mb-1">Deskripsi</label>
-                                    <textarea name="hero_description" class="w-full border p-2 rounded">{{ old('hero_description', $tentangData['hero_section']->value['description'] ?? '') }}</textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="block mb-1">Link Gambar</label>
-                                    <input type="text" name="hero_image" class="w-full border p-2 rounded"
-                                        value="{{ old('hero_image', $tentangData['hero_section']->value['image'] ?? '') }}">
-                                </div>
-                            </div>
+                            <div x-data="{ openSection: 1 }" class="space-y-5">
 
-                            {{-- SKILLS SECTION --}}
-                            <div class="border-b pb-4 mb-6">
-                                <h3 class="text-lg font-bold mb-4">Skills</h3>
-                                <div x-data="cardsEditor()" x-init="init(@js(old('skills', $tentangData['skills']->value ?? [])))">
-                                    <div class="flex justify-between items-center mb-3">
-                                        <h4 class="font-semibold">Skill Items</h4>
-                                        <button type="button" @click="add({name:'',percentage:''})"
-                                            class="px-3 py-1.5 bg-blue-600 text-white rounded">+ Add Skill</button>
+                                {{-- HERO SECTION --}}
+                                <div class="border rounded-xl p-5 bg-gray-50">
+                                    <button type="button"
+                                        @click="openSection === 1 ? openSection = null : openSection = 1"
+                                        class="flex justify-between items-center w-full text-left font-semibold text-gray-800 text-lg">
+                                        <span>🏠 Hero Section</span>
+                                        <span x-text="openSection === 1 ? '−' : '+'"></span>
+                                    </button>
+
+                                    <div x-show="openSection === 1" x-transition class="mt-4 space-y-4">
+
+                                        <div>
+                                            <label class="block font-medium mb-1">Judul</label>
+                                            <input type="text" name="hero_title"
+                                                class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400"
+                                                value="{{ old('hero_title', $tentangData['hero_section']->value['title'] ?? '') }}">
+                                        </div>
+
+                                        <div>
+                                            <label class="block font-medium mb-1">Deskripsi</label>
+                                            <textarea name="hero_description" rows="3" class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400">{{ old('hero_description', $tentangData['hero_section']->value['description'] ?? '') }}</textarea>
+                                        </div>
+
+                                        <div>
+                                            <label class="block font-medium mb-1">Link Gambar</label>
+                                            <input type="text" name="hero_image"
+                                                class="w-full border p-2 rounded focus:ring-2 focus:ring-blue-400"
+                                                value="{{ old('hero_image', $tentangData['hero_section']->value['image'] ?? '') }}">
+                                        </div>
+
                                     </div>
-                                    <div class="space-y-4">
+                                </div>
+
+                                {{-- SKILLS SECTION --}}
+                                <div class="border rounded-xl p-5 bg-gray-50" x-data="cardsEditor()"
+                                    x-init="init(@js(old('skills', $tentangData['skills']->value ?? [])))">
+
+                                    <button type="button"
+                                        @click="openSection === 2 ? openSection = null : openSection = 2"
+                                        class="flex justify-between items-center w-full text-left font-semibold text-gray-800 text-lg">
+                                        <span>💡 Skills Section</span>
+                                        <span x-text="openSection === 2 ? '−' : '+'"></span>
+                                    </button>
+
+                                    <div x-show="openSection === 2" x-transition class="mt-4 space-y-4">
+
+                                        <div class="flex justify-between items-center mb-3">
+                                            <h4 class="font-semibold">Daftar Skill</h4>
+                                            <button type="button" @click="add({name:'',percentage:''})"
+                                                class="bg-blue-600 text-white text-sm px-3 py-1.5 rounded">
+                                                + Tambah Skill
+                                            </button>
+                                        </div>
+
+                                        <template x-if="cards.length === 0">
+                                            <p class="text-sm text-gray-500">Belum ada skill. Klik tambah.</p>
+                                        </template>
+
                                         <template x-for="(skill,i) in cards" :key="i">
-                                            <div class="p-4 border rounded grid grid-cols-2 gap-4">
-                                                <div>
-                                                    <label class="block mb-1">Skill Name</label>
-                                                    <input type="text" class="w-full border p-2 rounded"
-                                                        :name="`skills[${i}][name]`" x-model="skill.name">
+                                            <div class="border rounded-xl bg-white p-4 space-y-3">
+                                                <div class="grid md:grid-cols-2 gap-4">
+                                                    <div>
+                                                        <label class="block font-medium mb-1">Nama Skill</label>
+                                                        <input type="text" class="w-full border p-2 rounded"
+                                                            :name="`skills[${i}][name]`" x-model="skill.name">
+                                                    </div>
+                                                    <div>
+                                                        <label class="block font-medium mb-1">Persentase</label>
+                                                        <input type="number" class="w-full border p-2 rounded"
+                                                            :name="`skills[${i}][percentage]`"
+                                                            x-model="skill.percentage" min="0" max="100">
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <label class="block mb-1">Percentage</label>
-                                                    <input type="number" class="w-full border p-2 rounded"
-                                                        :name="`skills[${i}][percentage]`" x-model="skill.percentage"
-                                                        min="0" max="100">
+                                                <div class="text-right">
+                                                    <button type="button" @click="remove(i)"
+                                                        class="text-red-600 text-sm">Hapus</button>
                                                 </div>
                                             </div>
                                         </template>
+
                                     </div>
                                 </div>
-                            </div>
 
-                            {{-- COUNTERS SECTION --}}
-                            <div class="border-b pb-4 mb-6">
-                                <h3 class="text-lg font-bold mb-4">Counters</h3>
-                                <div x-data="cardsEditor()" x-init="init(@js(old('counters', $tentangData['counters']->value ?? [])))">
-                                    <div class="flex justify-between items-center mb-3">
-                                        <h4 class="font-semibold">Counter Items</h4>
-                                        <button type="button" @click="add({title:'',value:''})"
-                                            class="px-3 py-1.5 bg-blue-600 text-white rounded">+ Add Counter</button>
-                                    </div>
-                                    <div class="space-y-4">
+                                {{-- COUNTERS SECTION --}}
+                                <div class="border rounded-xl p-5 bg-gray-50" x-data="cardsEditor()"
+                                    x-init="init(@js(old('counters', $tentangData['counters']->value ?? [])))">
+
+                                    <button type="button"
+                                        @click="openSection === 3 ? openSection = null : openSection = 3"
+                                        class="flex justify-between items-center w-full text-left font-semibold text-gray-800 text-lg">
+                                        <span>🔢 Counters</span>
+                                        <span x-text="openSection === 3 ? '−' : '+'"></span>
+                                    </button>
+
+                                    <div x-show="openSection === 3" x-transition class="mt-4 space-y-4">
+
+                                        <div class="flex justify-between items-center mb-3">
+                                            <h4 class="font-semibold">Item Counter</h4>
+                                            <button type="button" @click="add({title:'',value:''})"
+                                                class="bg-blue-600 text-white text-sm px-3 py-1.5 rounded">
+                                                + Tambah Counter
+                                            </button>
+                                        </div>
+
                                         <template x-for="(counter,i) in cards" :key="i">
-                                            <div class="p-4 border rounded grid grid-cols-2 gap-4">
-                                                <div>
-                                                    <label class="block mb-1">Title</label>
-                                                    <input type="text" class="w-full border p-2 rounded"
-                                                        :name="`counters[${i}][title]`" x-model="counter.title">
+                                            <div class="border rounded-xl p-4 bg-white space-y-3">
+                                                <div class="grid md:grid-cols-2 gap-4">
+                                                    <div>
+                                                        <label class="block mb-1 font-medium">Judul</label>
+                                                        <input type="text" class="w-full border p-2 rounded"
+                                                            :name="`counters[${i}][title]`" x-model="counter.title">
+                                                    </div>
+                                                    <div>
+                                                        <label class="block mb-1 font-medium">Nilai</label>
+                                                        <input type="number" class="w-full border p-2 rounded"
+                                                            :name="`counters[${i}][value]`" x-model="counter.value">
+                                                    </div>
                                                 </div>
-                                                <div>
-                                                    <label class="block mb-1">Value</label>
-                                                    <input type="number" class="w-full border p-2 rounded"
-                                                        :name="`counters[${i}][value]`" x-model="counter.value">
+                                                <div class="text-right">
+                                                    <button type="button" @click="remove(i)"
+                                                        class="text-red-600 text-sm">Hapus</button>
                                                 </div>
                                             </div>
                                         </template>
+
                                     </div>
                                 </div>
-                            </div>
 
-                            {{-- PRICING PLANS --}}
-                            <div class="border-b pb-4 mb-6">
-                                <h3 class="text-lg font-bold mb-4">Pricing Plans</h3>
-                                <div x-data="cardsEditor()" x-init="init(@js(old('plans', $tentangData['plans']->value ?? [])))">
-                                    <div class="flex justify-between items-center mb-3">
-                                        <h4 class="font-semibold">Plan Items</h4>
-                                        <button type="button" @click="add({name:'',price:'',duration:'',features:{}})"
-                                            class="px-3 py-1.5 bg-blue-600 text-white rounded">+ Add Plan</button>
-                                    </div>
-                                    <div class="space-y-4">
+                                {{-- PRICING PLANS --}}
+                                <div class="border rounded-xl p-5 bg-gray-50" x-data="cardsEditor()"
+                                    x-init="init(@js(old('plans', $tentangData['plans']->value ?? [])))">
+
+                                    <button type="button"
+                                        @click="openSection === 4 ? openSection = null : openSection = 4"
+                                        class="flex justify-between items-center w-full text-left font-semibold text-gray-800 text-lg">
+                                        <span>💼 Pricing Plans</span>
+                                        <span x-text="openSection === 4 ? '−' : '+'"></span>
+                                    </button>
+
+                                    <div x-show="openSection === 4" x-transition class="mt-4 space-y-4">
+
+                                        <div class="flex justify-between items-center mb-3">
+                                            <h4 class="font-semibold">Daftar Plan</h4>
+                                            <button type="button"
+                                                @click="add({name:'',price:'',duration:'',features:{}})"
+                                                class="bg-blue-600 text-white text-sm px-3 py-1.5 rounded">
+                                                + Tambah Plan
+                                            </button>
+                                        </div>
+
                                         <template x-for="(plan,i) in cards" :key="i">
-                                            <div class="p-4 border rounded space-y-3">
+                                            <div class="border rounded-xl p-4 bg-white space-y-3">
+
                                                 <div>
-                                                    <label class="block mb-1">Plan Name</label>
+                                                    <label class="block font-medium mb-1">Nama Paket</label>
                                                     <input type="text" class="w-full border p-2 rounded"
                                                         :name="`plans[${i}][name]`" x-model="plan.name">
                                                 </div>
-                                                <div class="grid grid-cols-2 gap-4">
+
+                                                <div class="grid md:grid-cols-2 gap-4">
                                                     <div>
-                                                        <label class="block mb-1">Price</label>
+                                                        <label class="block font-medium mb-1">Harga</label>
                                                         <input type="number" class="w-full border p-2 rounded"
                                                             :name="`plans[${i}][price]`" x-model="plan.price">
                                                     </div>
                                                     <div>
-                                                        <label class="block mb-1">Duration</label>
+                                                        <label class="block font-medium mb-1">Durasi</label>
                                                         <input type="text" class="w-full border p-2 rounded"
                                                             :name="`plans[${i}][duration]`" x-model="plan.duration">
                                                     </div>
                                                 </div>
+
                                                 <div>
-                                                    <label class="block mb-1">Features (satu per baris)</label>
-                                                    <textarea class="w-full border p-2 rounded" :name="`plans[${i}][features_text]`" x-model="plan.features_text"></textarea>
-                                                    <p class="text-xs text-gray-500 mt-1">
-                                                        Contoh:
-                                                        <br>- Unlimited Projects:1
-                                                        <br>- Priority Support:0
-                                                        <br>- Free Hosting:1
-                                                    </p>
+                                                    <label class="block font-medium mb-1">Fitur (1 per baris)</label>
+                                                    <textarea class="w-full border p-2 rounded h-24" :name="`plans[${i}][features_text]`" x-model="plan.features_text"></textarea>
+                                                    <small class="text-gray-500 text-xs">Format fitur:value (contoh:
+                                                        Unlimited Projects:1)</small>
                                                 </div>
+
+                                                <div class="text-right">
+                                                    <button type="button" @click="remove(i)"
+                                                        class="text-red-600 text-sm">Hapus</button>
+                                                </div>
+
                                             </div>
                                         </template>
+
                                     </div>
                                 </div>
+
                             </div>
 
-                            <div class="mt-6">
-                                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
-                                    Simpan Perubahan
+                            {{-- Save Button --}}
+                            <div class="text-right">
+                                <button type="submit"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg shadow">
+                                    💾 Simpan Perubahan
                                 </button>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
